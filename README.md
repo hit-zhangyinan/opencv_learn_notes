@@ -1,2 +1,3 @@
 # opencv_learn_notes
 opencv学习笔记
+用来记录学习opencv官网文档时的一些想法
