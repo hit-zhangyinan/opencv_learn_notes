@@ -3,14 +3,14 @@
 
 opencv拥有模块化的结构，下面是可用的模块：
 
-Core functionality(core)  定义基本数据结构的模块，包括了多维数组  Mat  和被其他模块使用的基本函数
-Image Processing(imgproc)  一个图像处理模块，包括线性和非线性图像滤波、几何图像转换(调整大小、仿射和透视扭曲、通用的基于表的重新映射)、颜色空间转换、直方图等。
-Video Analysis(video)  一个视频分析模块，包括运动估计，背景减去，和目标跟踪算法。
-Camera Calibration and 3D Reconstruction(calib3d)  基本的多视图几何算法，单个和立体相机校准，目标姿态估计，立体对应算法，以及三维重建的要素。
-2D Features Framework(features2d)  显著特征检测器、描述符和描述符匹配器。
-Object Detection(objdetect)  检测对象和预定义类的实例(例如，面孔、眼睛、杯子、人、汽车等)。
-High-level GUI(highgui)   一个易于使用的界面，简单的UI功能
-Video I/O(videodio)  an easy-to-use interface to video capturing and video codecs.
+Core functionality(core)  定义基本数据结构的模块，包括了多维数组  Mat  和被其他模块使用的基本函数  
+Image Processing(imgproc)  一个图像处理模块，包括线性和非线性图像滤波、几何图像转换(调整大小、仿射和透视扭曲、通用的基于表的重新映射)、颜色空间转换、直方图等。  
+Video Analysis(video)  一个视频分析模块，包括运动估计，背景减去，和目标跟踪算法。  
+Camera Calibration and 3D Reconstruction(calib3d)  基本的多视图几何算法，单个和立体相机校准，目标姿态估计，立体对应算法，以及三维重建的要素。  
+2D Features Framework(features2d)  显著特征检测器、描述符和描述符匹配器。  
+Object Detection(objdetect)  检测对象和预定义类的实例(例如，面孔、眼睛、杯子、人、汽车等)。  
+High-level GUI(highgui)   一个易于使用的界面，简单的UI功能  
+Video I/O(videodio)  an easy-to-use interface to video capturing and video codecs.  
 
 
 # API概念
@@ -106,11 +106,11 @@ OpenCV自动释放内存，并在大多数情况下自动为输出函数参数�
 ## 错误处理
 
 OpenCV使用异常来表示严重错误。
-当输入的数据具有正确的格式并且属于指定的值范围，但是算法由于某些原因(例如，优化算法没有收敛)而不能成功时，它返回一个特殊的错误代码(通常只是一个布尔变量)。
-异常可以是cv::Exception类或其派生类的实例。反过来，cv::Exception是std:: Exception的派生。因此，可以使用其他标准c++库组件在代码中优雅地处理它。
-异常通常是通过使用CV_Error(errcode, description)宏或其类似printf的CV_Error_(errcode， (printf-spec, printf-args))变体抛出的，
-或者使用CV_Assert(condition)宏来检查条件并在不满足条件时抛出异常。对于性能关键型代码，CV_DbgAssert(条件)只保留在Debug配置中。
-由于自动内存管理，所有中间缓冲区在突然错误的情况下自动回收。如果需要的话，你只需要添加一个try语句来捕获异常:
+当输入的数据具有正确的格式并且属于指定的值范围，但是算法由于某些原因(例如，优化算法没有收敛)而不能成功时，它返回一个特殊的错误代码(通常只是一个布尔变量)。  
+异常可以是cv::Exception类或其派生类的实例。反过来，cv::Exception是std:: Exception的派生。因此，可以使用其他标准c++库组件在代码中优雅地处理它。  
+异常通常是通过使用CV_Error(errcode, description)宏或其类似printf的CV_Error_(errcode， (printf-spec, printf-args))变体抛出的，  
+或者使用CV_Assert(condition)宏来检查条件并在不满足条件时抛出异常。对于性能关键型代码，CV_DbgAssert(条件)只保留在Debug配置中。  
+由于自动内存管理，所有中间缓冲区在突然错误的情况下自动回收。如果需要的话，你只需要添加一个try语句来捕获异常:  
 
 	try
 	{
