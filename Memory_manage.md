@@ -40,3 +40,7 @@ free以后其地址仍然不变（非NULL），只是该地址对应的内存是
 如果先将指针变量置为空，就再也找不到开辟的那块内存了，也就无法释放，造成内存泄漏<br>
 
 因此上面三条语句的顺序是定死的，不能修改
+
+[NULL指针、零指针、野指针](https://www.cnblogs.com/fly1988happy/archive/2012/04/16/2452021.html)  
+[Linux下segmentation fault总结](https://zhuanlan.zhihu.com/p/205579221)  
+[Segmentation Fault的产生原因及调试方法](https://www.cnblogs.com/linux-37ge/p/12781176.html)
