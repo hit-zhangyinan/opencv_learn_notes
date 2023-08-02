@@ -16,12 +16,12 @@ free以后其地址仍然不变（非NULL），只是该地址对应的内存是
 会导致出错的代码：<br>
 
 	char *p = (char *) malloc(100);
-	strcpy(p, “hello”);
+	strcpy(p, "hello");
 	free(p);   // p 所指的内存被释放，但是p所指的地址仍然不变
 	...
 	if(p != NULL)      // 没有起到防错作用
 	{
-		strcpy(p, “world”);      // 出错
+		strcpy(p, "world");      // 出错
 	}
 
 因此在使用堆区内存时，要注意遵循以下步骤：<br>
